@@ -1,15 +1,23 @@
+import { quizData } from "@/home/quizData";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  questions: quizData,
+  currentQuestionIndex: 0,
+  userAnswers: Array(quizData.length).fill(null),
 };
 
 export const quizSlice = createSlice({
   name: "quiz",
   initialState,
-  reducers: {},
+  reducers: {
+    setAnswer: (state, action) => {
+      const { questionIndex, answer } = action.payload;
+      state.userAnswers[questionIndex] = answer;
+    },
+  },
 });
 
-// export const {} = counterSlice.actions;
+export const { setAnswer } = quizSlice.actions;
 
 export default quizSlice.reducer;
