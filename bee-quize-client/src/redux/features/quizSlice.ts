@@ -1,10 +1,18 @@
 import { quizData } from "@/home/quizData";
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+interface QuizState {
+  questions: typeof quizData;
+  currentQuestionIndex: number;
+  userAnswers: (string | null)[];
+  quizComplete: boolean;
+}
+
+const initialState: QuizState = {
   questions: quizData,
   currentQuestionIndex: 0,
   userAnswers: Array(quizData.length).fill(null),
+  quizComplete: false,
 };
 
 export const quizSlice = createSlice({
@@ -15,9 +23,17 @@ export const quizSlice = createSlice({
       const { questionIndex, answer } = action.payload;
       state.userAnswers[questionIndex] = answer;
     },
+    // nextQuestion: (state) => {
+    //   if (state.currentQuestionIndex < state.questions.length - 1) {
+    //     state.currentQuestionIndex += 1;
+    //   }
+    // },
+
     nextQuestion: (state) => {
       if (state.currentQuestionIndex < state.questions.length - 1) {
         state.currentQuestionIndex += 1;
+      } else {
+        state.quizComplete = true;
       }
     },
     previousQuestion: (state) => {

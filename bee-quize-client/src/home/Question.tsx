@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAppDispatch, useAppSelector } from "../redux/hook";
 import { Button } from "@/components/ui/button";
 import QuizControls from "./QuizControls";
@@ -26,17 +20,14 @@ const Question = () => {
         answer: ans,
       })
     );
-    console.log(ans);
   };
-
-  console.log(userAnswers);
 
   return (
     <div className="flex justify-center">
-      <Card className="w-[450px] mt-10">
+      <Card className="w-[450px] ">
         <CardHeader>
           <CardTitle>{currentQuestion.question}</CardTitle>
-          <CardDescription></CardDescription>
+          {/* <CardDescription>{}</CardDescription> */}
         </CardHeader>
 
         <CardContent>
@@ -46,14 +37,13 @@ const Question = () => {
                 variant={option === currentAnswer ? "default" : "outline"}
                 onClick={() => handleAnswerChange(option)}
                 className="w-full mt-3"
-                size="lg"
+                size={"lg"}
                 key={index}
               >
                 {option}
               </Button>
             ))}
           </div>
-
           <QuizControls></QuizControls>
         </CardContent>
       </Card>

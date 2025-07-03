@@ -1,9 +1,13 @@
 import Question from "./home/Question";
+import { useAppSelector } from "@/redux/hook";
+import QuizSummary from "./home/QuizSummary";
 
 const App = () => {
+  const { quizComplete } = useAppSelector((state) => state.quiz);
   return (
     <div>
-      <Question></Question>
+      <h1 className="text-center text-9xl my-12">Quiz App</h1>
+      {quizComplete ? <QuizSummary /> : <Question />}
     </div>
   );
 };
