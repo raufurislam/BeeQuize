@@ -1,10 +1,9 @@
-import { Button } from "./components/ui/button";
+import Question from "./home/Question";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello, World!</h1>
-      <Button>Click Me</Button>
+      <Question></Question>
     </div>
   );
 };
