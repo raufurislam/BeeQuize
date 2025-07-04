@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "cd7594be-68c0-4d7a-9706-50aef7bab28c",
+		"name": "quiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28346560",
+		"_collection_link": "https://cloudy-spaceship-160654.postman.co/workspace/Team-Workspace~bc4d3685-422d-409f-8beb-c299230f93b9/collection/28346560-cd7594be-68c0-4d7a-9706-50aef7bab28c?action=share&source=collection_link&creator=28346560"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"General Knowledge Quiz\",\r\n  \"description\": \"A quiz to test your general knowledge on various topics.\",\r\n  \"questions\": [\r\n    {\r\n      \"question\": \"What is the capital of France?\",\r\n      \"options\": [\"Berlin\", \"Madrid\", \"Paris\", \"Rome\"],\r\n      \"correctAnswer\": \"Paris\"\r\n    },\r\n    {\r\n      \"question\": \"Who developed the theory of relativity?\",\r\n      \"options\": [\"Isaac Newton\", \"Albert Einstein\", \"Galileo Galilei\", \"Nikola Tesla\"],\r\n      \"correctAnswer\": \"Albert Einstein\"\r\n    },\r\n    {\r\n      \"question\": \"Which planet is known as the Red Planet?\",\r\n      \"options\": [\"Earth\", \"Mars\", \"Jupiter\", \"Saturn\"],\r\n      \"correctAnswer\": \"Mars\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/quizzes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get quiz",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"General Knowledge Quiz\",\r\n  \"description\": \"A quiz to test your general knowledge on various topics.\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"What is the capital of France?\",\r\n      \"options\": [\"Berlin\", \"Madrid\", \"Paris\", \"Rome\"],\r\n      \"correctAnswer\": \"Paris\"\r\n    },\r\n    {\r\n      \"questionText\": \"Who developed the theory of relativity?\",\r\n      \"options\": [\"Isaac Newton\", \"Albert Einstein\", \"Galileo Galilei\", \"Nikola Tesla\"],\r\n      \"correctAnswer\": \"Albert Einstein\"\r\n    },\r\n    {\r\n      \"questionText\": \"Which planet is known as the Red Planet?\",\r\n      \"options\": [\"Earth\", \"Mars\", \"Jupiter\", \"Saturn\"],\r\n      \"correctAnswer\": \"Mars\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/quizzes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quizzes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update quiz",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"General Knowledge Quiz\",\r\n  \"description\": \"A quiz to test your general knowledge on various topics.\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"What is the capital of France?\",\r\n      \"options\": [\"Berlin\", \"Madrid\", \"Paris2\", \"Rome\"],\r\n      \"correctAnswer\": \"Paris2\"\r\n    },\r\n    {\r\n      \"questionText\": \"Who developed the theory of relativity?\",\r\n      \"options\": [\"Isaac Newton\", \"Albert Einstein\", \"Galileo Galilei\", \"Nikola Tesla\"],\r\n      \"correctAnswer\": \"Albert Einstein\"\r\n    },\r\n    {\r\n      \"questionText\": \"Which planet is known as the Red Planet?\",\r\n      \"options\": [\"Earth\", \"Mars\", \"Jupiter\", \"Saturn\"],\r\n      \"correctAnswer\": \"Mars\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/quizzes/677d070b489312f059905be1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quizzes",
+						"677d070b489312f059905be1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single quiz",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"General Knowledge Quiz\",\r\n  \"description\": \"A quiz to test your general knowledge on various topics.\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"What is the capital of France?\",\r\n      \"options\": [\"Berlin\", \"Madrid\", \"Paris\", \"Rome\"],\r\n      \"correctAnswer\": \"Paris\"\r\n    },\r\n    {\r\n      \"questionText\": \"Who developed the theory of relativity?\",\r\n      \"options\": [\"Isaac Newton\", \"Albert Einstein\", \"Galileo Galilei\", \"Nikola Tesla\"],\r\n      \"correctAnswer\": \"Albert Einstein\"\r\n    },\r\n    {\r\n      \"questionText\": \"Which planet is known as the Red Planet?\",\r\n      \"options\": [\"Earth\", \"Mars\", \"Jupiter\", \"Saturn\"],\r\n      \"correctAnswer\": \"Mars\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/quizzes/677d070b489312f059905be1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quizzes",
+						"677d070b489312f059905be1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"General Knowledge Quiz\",\r\n  \"description\": \"A quiz to test your general knowledge on various topics.\",\r\n  \"questions\": [\r\n    {\r\n      \"questionText\": \"What is the capital of France?\",\r\n      \"options\": [\"Berlin\", \"Madrid\", \"Paris\", \"Rome\"],\r\n      \"correctAnswer\": \"Paris\"\r\n    },\r\n    {\r\n      \"questionText\": \"Who developed the theory of relativity?\",\r\n      \"options\": [\"Isaac Newton\", \"Albert Einstein\", \"Galileo Galilei\", \"Nikola Tesla\"],\r\n      \"correctAnswer\": \"Albert Einstein\"\r\n    },\r\n    {\r\n      \"questionText\": \"Which planet is known as the Red Planet?\",\r\n      \"options\": [\"Earth\", \"Mars\", \"Jupiter\", \"Saturn\"],\r\n      \"correctAnswer\": \"Mars\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/quizzes/677d070b489312f059905be1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quizzes",
+						"677d070b489312f059905be1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
