@@ -8,8 +8,9 @@ const app = express();
 app.use(bodyParser.json()); // To parse JSON bodies
 app.use(cors({ origin: ["http://localhost:5173"] }));
 
-// Connect to MongoDB
+mongoose.set("strictQuery", true); // or false if you want loose filtering
 
+// Connect to MongoDB
 mongoose.connect(process.env.DB_URl!);
 
 // Quiz Schema (with embedded questions)
