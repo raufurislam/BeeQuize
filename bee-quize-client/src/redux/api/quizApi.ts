@@ -5,22 +5,23 @@ export const quizApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000/api",
   }),
-  tagTypes: ["quiz", "user", "admin"],
+  tagTypes: ["quiz","user","admin"],
   endpoints: (builder) => ({
+
     addQuiz: builder.mutation({
       query: (body) => ({
         url: "/quizzes",
         method: "POST",
         body,
       }),
-      invalidatesTags: ["quiz"],
+      invalidatesTags:["quiz"]
     }),
 
-    getAllQuiz: builder.query({
-      query: () => "/quizzes",
-      providesTags: ["quiz"],
-    }),
+    getAllQuiz:builder.query({
+        query:()=>"/quizzes",
+        providesTags:["quiz"]
+    })
   }),
 });
 
-export const { useAddQuizMutation } = quizApi;
+export const {useAddQuizMutation,useGetAllQuizQuery}=quizApi
